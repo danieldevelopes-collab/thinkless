@@ -20,7 +20,7 @@ export function Toolbar({ onExit }: { onExit: () => void }) {
         <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-xs font-black text-space-900">
           SW
         </span>
-        <span className="text-sm font-semibold text-white">SpatialWave</span>
+        <span className="text-sm font-semibold text-white">Thinkless</span>
         <span className="ml-1 rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-slate-400">guest demo</span>
       </div>
 

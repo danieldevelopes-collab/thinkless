@@ -8,7 +8,7 @@ import type { Graph } from "../types";
 export function seedGraph(): Graph {
   return {
     nodes: [
-      { id: "g1", type: "goal", title: "Launch SpatialWave v1", status: "todo", priority: "critical", dueDate: "2026-06-25", x: 640, y: 24, tags: ["release"] },
+      { id: "g1", type: "goal", title: "Launch Thinkless v1", status: "todo", priority: "critical", dueDate: "2026-06-25", x: 640, y: 24, tags: ["release"] },
       { id: "m1", type: "milestone", title: "Public beta", status: "todo", priority: "high", dueDate: "2026-06-18", x: 640, y: 300, tags: ["beta"] },
       { id: "t1", type: "task", title: "Design spatial canvas UI", status: "done", priority: "high", dueDate: "2026-05-28", x: 120, y: 180, tags: ["ui"] },
       { id: "d1", type: "decision", title: "1-doc vs doc-per-node storage", status: "done", priority: "medium", dueDate: "2026-05-30", x: 120, y: 320, tags: ["architecture"] },

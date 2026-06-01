@@ -18,7 +18,7 @@ export function Landing({ onLaunch }: { onLaunch: () => void }) {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2">
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-sm font-black text-space-900">SW</span>
-          <span className="font-semibold">SpatialWave</span>
+          <span className="font-semibold">Thinkless</span>
         </div>
         <button onClick={onLaunch} className="rounded-full border border-white/15 px-4 py-1.5 text-sm hover:border-accent/60">
           Launch demo
@@ -33,7 +33,7 @@ export function Landing({ onLaunch }: { onLaunch: () => void }) {
           Your project becomes a map.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-400">
-          SpatialWave turns goals, tasks, blockers and decisions into a living spatial graph — then computes the
+          Thinkless turns goals, tasks, blockers and decisions into a living spatial graph — then computes the
           <span className="text-slate-200"> best next route</span> through the work. Most tools show what exists; this shows where to go next.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
@@ -63,7 +63,7 @@ export function Landing({ onLaunch }: { onLaunch: () => void }) {
           {[
             { n: "1", t: "Map your work", b: "Drop goals, tasks, blockers, ideas and decisions onto an infinite canvas. Each type has its own shape and colour." },
             { n: "2", t: "Connect dependencies", b: "Draw links so the app understands order: what must happen before what, and what each task unblocks." },
-            { n: "3", t: "Follow the momentum", b: "SpatialWave highlights the highest-leverage next step and the chain it unlocks — your path through the chaos." },
+            { n: "3", t: "Follow the momentum", b: "Thinkless highlights the highest-leverage next step and the chain it unlocks — your path through the chaos." },
           ].map((c) => (
             <div key={c.n} className="glass rounded-2xl p-5">
               <div className="grid h-8 w-8 place-items-center rounded-lg bg-accent/15 font-bold text-accent">{c.n}</div>
@@ -92,7 +92,7 @@ export function Landing({ onLaunch }: { onLaunch: () => void }) {
       </section>
 
       <footer className="mx-auto max-w-6xl border-t border-white/10 px-6 py-8 text-center text-sm text-slate-500">
-        SpatialWave · Daniel Bracher · a Firebase Spark-safe spatial productivity system.
+        Thinkless · Daniel Bracher · a Firebase Spark-safe spatial productivity system.
       </footer>
     </div>
   );
