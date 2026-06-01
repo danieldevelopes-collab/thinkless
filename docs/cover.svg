@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <radialGradient id="g1" cx="80%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#6ea8fe" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#6ea8fe" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="8%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#b692ff" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#b692ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1,1 L8,4.5 L1,8" fill="none" stroke="#6ea8fe" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="#070a12"/>
+  <rect width="1200" height="750" fill="url(#dots)"/>
+  <rect width="1200" height="750" fill="url(#g1)"/>
+  <rect width="1200" height="750" fill="url(#g2)"/>
+
+  <!-- momentum path (glowing) -->
+  <g filter="url(#glow)" stroke="#6ea8fe" stroke-width="2.4" fill="none" marker-end="url(#arrow)" opacity="0.9">
+    <path d="M250,250 C360,250 380,400 470,400"/>
+    <path d="M620,400 C720,400 740,250 840,250"/>
+    <path d="M470,440 C470,520 620,520 620,460"/>
+  </g>
+  <!-- secondary links -->
+  <g stroke="#9aa7bd" stroke-width="1.4" fill="none" stroke-dasharray="5 6" opacity="0.4">
+    <path d="M250,300 C360,360 360,540 250,560"/>
+    <path d="M840,300 C900,380 900,500 840,540"/>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <!-- task (start) -->
+    <g transform="translate(180,222)">
+      <rect width="170" height="58" rx="14" fill="#0f131e" stroke="#6ea8fe" stroke-width="1.4"/>
+      <rect x="14" y="20" width="18" height="18" rx="4" fill="none" stroke="#6ea8fe" stroke-width="1.8"/>
+      <text x="42" y="26" fill="#6ea8fe" font-size="11" font-weight="700" letter-spacing="1">TASK</text>
+      <text x="42" y="44" fill="#e7ecf5" font-size="13" font-weight="600">Momentum engine</text>
+      <rect x="116" y="8" width="44" height="17" rx="8" fill="#6ea8fe" fill-opacity="0.18"/>
+      <text x="138" y="20" fill="#6ea8fe" font-size="10" font-weight="700" text-anchor="middle">Start</text>
+    </g>
+    <!-- milestone -->
+    <g transform="translate(400,372)">
+      <rect width="170" height="58" rx="14" fill="#0f131e" stroke="#b692ff" stroke-width="1.4"/>
+      <circle cx="23" cy="29" r="9" fill="none" stroke="#b692ff" stroke-width="1.8"/>
+      <text x="42" y="26" fill="#b692ff" font-size="11" font-weight="700" letter-spacing="1">MILESTONE</text>
+      <text x="42" y="44" fill="#e7ecf5" font-size="13" font-weight="600">Public beta</text>
+    </g>
+    <!-- goal -->
+    <g transform="translate(840,222)">
+      <rect width="170" height="58" rx="14" fill="#0f131e" stroke="#39d98a" stroke-width="1.4"/>
+      <polygon points="23,16 33,22 33,36 23,42 13,36 13,22" fill="none" stroke="#39d98a" stroke-width="1.8"/>
+      <text x="42" y="26" fill="#39d98a" font-size="11" font-weight="700" letter-spacing="1">GOAL</text>
+      <text x="42" y="44" fill="#e7ecf5" font-size="13" font-weight="600">Launch v1</text>
+    </g>
+    <!-- blocker -->
+    <g transform="translate(165,532)">
+      <rect width="170" height="58" rx="14" fill="#1a0f14" stroke="#ff7a90" stroke-width="1.4"/>
+      <polygon points="23,16 33,29 23,42 13,29" fill="none" stroke="#ff7a90" stroke-width="1.8"/>
+      <text x="42" y="26" fill="#ff7a90" font-size="11" font-weight="700" letter-spacing="1">BLOCKER</text>
+      <text x="42" y="44" fill="#e7ecf5" font-size="13" font-weight="600">Quota review</text>
+    </g>
+    <!-- idea -->
+    <g transform="translate(840,512)">
+      <rect width="170" height="58" rx="14" fill="#0f131e" stroke="#f4b740" stroke-width="1.4"/>
+      <path d="M23,15 l3,9 9,3 -9,3 -3,9 -3,-9 -9,-3 9,-3 z" fill="none" stroke="#f4b740" stroke-width="1.6"/>
+      <text x="42" y="26" fill="#f4b740" font-size="11" font-weight="700" letter-spacing="1">IDEA</text>
+      <text x="42" y="44" fill="#e7ecf5" font-size="13" font-weight="600">3D zones</text>
+    </g>
+    <!-- decision (start of path) -->
+    <g transform="translate(470,412)">
+      <rect width="150" height="48" rx="12" fill="#0f131e" stroke="#56d6d6" stroke-width="1.2" opacity="0.95"/>
+      <text x="16" y="22" fill="#56d6d6" font-size="10" font-weight="700" letter-spacing="1">DECISION</text>
+      <text x="16" y="38" fill="#cdd6e4" font-size="12">1-doc storage</text>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g transform="translate(72,72)">
+    <rect width="40" height="40" rx="11" fill="#0b1020" stroke="#6ea8fe" stroke-opacity="0.4"/>
+    <text x="20" y="27" fill="#6ea8fe" font-size="17" font-weight="900" text-anchor="middle">SW</text>
+    <text x="56" y="20" fill="#ffffff" font-size="22" font-weight="800">SpatialWave</text>
+    <text x="56" y="40" fill="#97a3b6" font-size="13">Your project becomes a map.</text>
+  </g>
+
+  <text x="72" y="690" fill="#5b6679" font-size="14">Momentum-based project navigation · React · TypeScript · Firebase</text>
+</svg>
