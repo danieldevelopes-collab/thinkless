@@ -4,7 +4,7 @@
 
 Not a board, list, or calendar. Goals, tasks, blockers, milestones and decisions live as connected nodes on a zoomable canvas. Completing work sends a ripple through the graph, and the app continuously computes *where to go next* — no AI, no backend cost, just a graph algorithm running client-side.
 
-> **Status:** Phase 1 complete — the full interactive layer (canvas, graph, Momentum engine, focus mode, waves) running on mock data. Phases 2–4 add Firebase persistence, collaboration, and polish (see [Roadmap](#roadmap)).
+> **Status:** Phases 1–2 complete — the full interactive layer **plus** Google/email sign-in and one-document Firestore persistence. **Live: [danieldevelopes-thinkless.web.app](https://danieldevelopes-thinkless.web.app)** (guest mode needs no sign-in). Phases 3–4 add zones, export, and collaboration (see [Roadmap](#roadmap)).
 
 By **Daniel Bracher** · TypeScript · React + Vite · React Flow · Tailwind · Zustand · Vitest · MIT.
 
@@ -36,6 +36,12 @@ npm test     # 14 tests over graph + momentum logic
 - **Blocked detection** — anything waiting on incomplete work is surfaced.
 - **Node editor** — edit every field and manage links from a glass side panel.
 - **Status filter**, **seeded guest demo** (no sign-in), responsive dark "spatial" UI.
+
+## Sign-in & cloud sync (Phase 2)
+
+- **Sign in with Google or email/password** — or stay in **guest mode**, which needs no account and touches no backend.
+- **Your workspace persists** as a single Firestore document: load = **1 read**, debounced save = **1 write**, with an **offline cache** so it works without a connection.
+- **Owner-only security rules** — `workspaces/{uid}` is readable and writable only by that signed-in user.
 
 ## Run it
 
@@ -74,8 +80,8 @@ This app is built to run on Firebase's **free Spark plan**. The persistence mode
 
 ## Roadmap
 
-- **Phase 1 — done:** the interactive layer over mock data (this repo).
-- **Phase 2:** Firebase Auth (Google + email), one-doc Firestore persistence, offline cache, security rules + emulator tests.
+- **Phase 1 — done:** the interactive layer over mock data.
+- **Phase 2 — done:** Firebase Auth (Google + email), one-doc Firestore persistence, offline cache, owner-only security rules.
 - **Phase 3:** zones/rooms, activity timeline, saved views, multi-workspace, export (JSON/PNG).
 - **Phase 4:** real-time multi-user presence & sharing, themes, optional 3D zone view.
 
