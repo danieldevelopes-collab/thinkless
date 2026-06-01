@@ -3,9 +3,12 @@ import { useStore } from "../store/useStore";
 import { NODE_TYPE_META, NODE_TYPE_ORDER, STATUS_META } from "../lib/nodeTypes";
 import { ShapeIcon } from "./ShapeIcon";
 import type { Status } from "../types";
+import { useAuth } from "../store/useAuth";
 
-export function Toolbar({ onExit }: { onExit: () => void }) {
+export function Toolbar({ onExit, onSignIn }: { onExit: () => void; onSignIn: () => void }) {
   const addNode = useStore((s) => s.addNode);
+  const user = useAuth((s) => s.user);
+  const signOut = useAuth((s) => s.signOut);
   const mode = useStore((s) => s.mode);
   const setMode = useStore((s) => s.setMode);
   const filter = useStore((s) => s.filterStatus);
@@ -17,11 +20,13 @@ export function Toolbar({ onExit }: { onExit: () => void }) {
   return (
     <header className="absolute left-3 right-3 top-3 z-30 flex items-center gap-2">
       <div className="glass flex items-center gap-2 rounded-2xl px-3 py-2">
-        <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-xs font-black text-space-900">
-          SW
+        <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-sm font-black text-space-900">
+          T
         </span>
         <span className="text-sm font-semibold text-white">Thinkless</span>
-        <span className="ml-1 rounded-md bg-white/5 px-1.5 py-0.5 text-[10px] text-slate-400">guest demo</span>
+        <span className="ml-1 rounded-md bg-white/5 px-1.5 py-0.5 text-[10px]" style={{ color: user ? "#39d98a" : "#97a3b6" }}>
+          {user ? "☁ synced" : "guest demo"}
+        </span>
       </div>
 
       <div className="glass relative flex items-center gap-1 rounded-2xl px-2 py-1.5">
@@ -75,9 +80,23 @@ export function Toolbar({ onExit }: { onExit: () => void }) {
 
       <div className="glass ml-auto flex items-center gap-1 rounded-2xl px-2 py-1.5">
         <span className="px-2 text-xs text-slate-400">{count} nodes</span>
-        <button onClick={reset} className="rounded-lg px-2.5 py-1.5 text-sm text-slate-300 hover:bg-white/10" title="Reset demo">
+        <button onClick={reset} className="rounded-lg px-2.5 py-1.5 text-sm text-slate-300 hover:bg-white/10" title="Reset workspace">
           ↻ Reset
         </button>
+        {user ? (
+          <>
+            <span className="max-w-[150px] truncate px-2 text-xs text-slate-300" title={user.email ?? undefined}>
+              {user.email ?? "Signed in"}
+            </span>
+            <button onClick={() => signOut()} className="rounded-lg px-2.5 py-1.5 text-sm text-slate-300 hover:bg-white/10">
+              Sign out
+            </button>
+          </>
+        ) : (
+          <button onClick={onSignIn} className="rounded-lg bg-accent/20 px-2.5 py-1.5 text-sm font-medium text-accent hover:bg-accent/30">
+            Sign in
+          </button>
+        )}
         <button onClick={onExit} className="rounded-lg px-2.5 py-1.5 text-sm text-slate-300 hover:bg-white/10">
           Exit
         </button>

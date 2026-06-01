@@ -12,17 +12,22 @@ const FEATURES: { title: string; body: string }[] = [
   { title: "Keyboard-first", body: "Built to be driven fast, like Linear — not clicked through." },
 ];
 
-export function Landing({ onLaunch }: { onLaunch: () => void }) {
+export function Landing({ onLaunch, onSignIn }: { onLaunch: () => void; onSignIn: () => void }) {
   return (
     <div className="space-bg min-h-screen text-slate-100">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-sm font-black text-space-900">SW</span>
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-violet text-sm font-black text-space-900">T</span>
           <span className="font-semibold">Thinkless</span>
         </div>
-        <button onClick={onLaunch} className="rounded-full border border-white/15 px-4 py-1.5 text-sm hover:border-accent/60">
-          Launch demo
-        </button>
+        <div className="flex items-center gap-2">
+          <button onClick={onSignIn} className="rounded-full px-4 py-1.5 text-sm text-slate-300 hover:text-white">
+            Sign in
+          </button>
+          <button onClick={onLaunch} className="rounded-full border border-white/15 px-4 py-1.5 text-sm hover:border-accent/60">
+            Launch demo
+          </button>
+        </div>
       </header>
 
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-12 text-center">
@@ -44,7 +49,10 @@ export function Landing({ onLaunch }: { onLaunch: () => void }) {
             View source
           </a>
         </div>
-        <p className="mt-3 text-xs text-slate-500">No sign-up — the demo runs entirely in your browser.</p>
+        <p className="mt-3 text-xs text-slate-500">
+          No sign-up needed — the demo runs in your browser.{" "}
+          <button onClick={onSignIn} className="text-accent hover:underline">Sign in</button> to save your work to the cloud.
+        </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
           {NODE_TYPE_ORDER.map((t) => {
