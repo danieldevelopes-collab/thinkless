@@ -78,6 +78,22 @@ This app is built to run on Firebase's **free Spark plan**. The persistence mode
 - Offline persistent cache; security rules restrict each workspace to its owner.
 - Guest demo uses **local state only** → zero Firestore usage for visitors.
 
+## A short history of thinking in space
+
+Thinkless stands on two old ideas — *think in space* and *follow the critical path* — and it's worth naming where they came from.
+
+**Seeing your thoughts laid out.** In **1945**, **Vannevar Bush** described the **Memex** in *As We May Think*: a desk that stored documents and, crucially, let you build **associative trails** between them, because he believed the mind works by association, not by index. Two decades later **Ted Nelson** coined **"hypertext"** (**1965**) and chased it through **Project Xanadu**; in **1968**, **Douglas Engelbart**'s **NLS** — the demo now called *"The Mother of All Demos"* — showed linked, structured, navigable information (and the mouse) for the first time. **Tony Buzan** popularised the hand-drawn **mind map** in the 1970s. Researchers **Catherine Marshall** and **Frank Shipman** then studied **spatial hypertext** — the finding that people encode meaning in *where* they place things — and **Mark Bernstein**'s **Tinderbox** turned it into a tool. The modern descendants are everywhere: **Miro**, **Milanote**, **Obsidian**'s graph view, **Roam Research**'s networked thought.
+
+**Knowing what to do next.** The other half is older than the computer's spatial dreams. In **1957–58**, two methods for scheduling huge projects appeared almost simultaneously: the **Critical Path Method (CPM)** — by **James Kelley** (Remington Rand) and **Morgan Walker** (DuPont) — and **PERT**, built for the US Navy's Polaris programme. Both model work as a **graph of dependencies** and compute the **critical path**: the chain that decides the soonest you can possibly finish. **David Allen**'s *Getting Things Done* (**2001**) distilled the human version into two words — **"next action."** Thinkless's **Momentum Path is a small, direct descendant of CPM**: a dependency graph, scored and walked to surface the highest-leverage next step.
+
+Most tools inherited the **map** but not the **math**. Thinkless tries to carry both.
+
+> These attributions are offered in good faith; if a name, date, or credit is off, corrections are genuinely welcome.
+
+## Credits & acknowledgements
+
+Built on a lot of other people's work: **React** & **React Flow** (`@xyflow/react`, xyflow team) for the canvas, **Zustand** (Poimandres) for state, **Tailwind CSS**, **Vite**, **Vitest**, and **Firebase** (Auth, Firestore, Hosting) for the free-tier backend. The ideas above belong to the pioneers named in the history.
+
 ## Roadmap
 
 - **Phase 1 — done:** the interactive layer over mock data.
