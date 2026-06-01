@@ -28,6 +28,7 @@ interface SpatialState {
   removeEdge: (id: string) => void;
 
   resetDemo: () => void;
+  replaceGraph: (graph: Graph) => void;
 }
 
 export const useStore = create<SpatialState>((set, get) => ({
@@ -102,4 +103,7 @@ export const useStore = create<SpatialState>((set, get) => ({
 
   resetDemo: () =>
     set({ graph: seedGraph(), selectedId: null, mode: "explore", filterStatus: "all", rippling: [] }),
+
+  // Swap in a whole graph (used when a signed-in user's workspace loads).
+  replaceGraph: (graph) => set({ graph, selectedId: null, rippling: [] }),
 }));
