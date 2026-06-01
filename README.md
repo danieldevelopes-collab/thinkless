@@ -1,4 +1,4 @@
-# SpatialWave
+# Thinkless
 
 **A spatial productivity system — your project becomes a navigable map, and a deterministic _Momentum Path_ shows the best next route through the work.**
 
@@ -12,7 +12,7 @@ By **Daniel Bracher** · TypeScript · React + Vite · React Flow · Tailwind ·
 
 ## The differentiator: the Momentum Path
 
-Most tools show **what exists**. SpatialWave computes **where to go next**, deterministically:
+Most tools show **what exists**. Thinkless computes **where to go next**, deterministically:
 
 1. Dependency links form a DAG (`A → B` means *A must be done before B*). Cycles are detected and flagged.
 2. The **actionable frontier** = incomplete, un-blocked nodes whose every prerequisite is done.

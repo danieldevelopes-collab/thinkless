@@ -87,7 +87,7 @@
   <g transform="translate(72,72)">
     <rect width="40" height="40" rx="11" fill="#0b1020" stroke="#6ea8fe" stroke-opacity="0.4"/>
     <text x="20" y="27" fill="#6ea8fe" font-size="17" font-weight="900" text-anchor="middle">SW</text>
-    <text x="56" y="20" fill="#ffffff" font-size="22" font-weight="800">SpatialWave</text>
+    <text x="56" y="20" fill="#ffffff" font-size="22" font-weight="800">Thinkless</text>
     <text x="56" y="40" fill="#97a3b6" font-size="13">Your project becomes a map.</text>
   </g>
 
