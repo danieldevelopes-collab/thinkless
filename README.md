@@ -90,6 +90,12 @@ Most tools inherited the **map** but not the **math**. Thinkless tries to carry 
 
 > These attributions are offered in good faith; if a name, date, or credit is off, corrections are genuinely welcome.
 
+## The language it's built in
+
+Thinkless runs in the browser, so it's built in the browser's language — and that language has a remarkable origin. **JavaScript** was written by **Brendan Eich** at **Netscape** in **1995**, famously in about **ten days**, to make web pages move. For years it was dismissed as a toy; today it is the most widely deployed language on Earth, running in every browser on the planet — which is exactly why a Thinkless workspace needs no install and opens anywhere.
+
+But raw JavaScript has no type system, and a graph engine full of scoring and dependency math is precisely the kind of code that rots without one. So Thinkless is written in **TypeScript** — created by **Anders Hejlsberg** at **Microsoft** in **2012** (the same architect behind Turbo Pascal, Delphi and C#). TypeScript layers static types over JavaScript, catching whole classes of mistakes before the code ever runs, then compiling away to ordinary JavaScript. The Momentum Path engine is fully typed and unit-tested — the types are part of why its arithmetic can be trusted.
+
 ## Credits & acknowledgements
 
 Built on a lot of other people's work: **React** & **React Flow** (`@xyflow/react`, xyflow team) for the canvas, **Zustand** (Poimandres) for state, **Tailwind CSS**, **Vite**, **Vitest**, and **Firebase** (Auth, Firestore, Hosting) for the free-tier backend. The ideas above belong to the pioneers named in the history.
